@@ -1,0 +1,90 @@
+/* Alap stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Fejlécek */
+h1 {
+    text-align: center;
+    color: #2e8b57;
+}
+
+/* Táblázatok */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #2e8b57;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody td img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Űrlap */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="number"], select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Kosár piktogram */
+.kosar-piktogram {
+    font-size: 20px;
+    color: #d2691e;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Kosár */
+#osszesen {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Gombok */
+button {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b35617;
+}
