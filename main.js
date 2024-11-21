@@ -4,7 +4,7 @@ let veggies = [
     { name: "Uborka", price: 1599, amount: 100, image: "cucumber.jpg" },
     { name: "Padlizsán", price: 1120, amount: 100, image: "eggplant.jpg" },
     { name: "Paradicsom", price: 1599, amount: 100, image: "tomato.jpg" },
-    { name: "Paprika", price: 1605, amount: 100, image: "broccoli.jpg" },
+    { name: "Paprika", price: 1605, amount: 100, image: "pepper.jpg" },
     { name: "Burgonya", price: 349, amount: 100, image: "potato.jpg" },
     { name: "Cékla", price: 595, amount: 100, image: "beetroot.jpg" },
 ]
@@ -62,7 +62,7 @@ function displayOrder() {
                 <td>${veggie.name}</td>
                 <td>${veggie.price} Ft</td>                
                 <td>${item.amount} kg</td>
-                <td>${veggie.price * item.amount} Ft"></td>
+                <td>${veggie.price * item.amount} Ft</td>
                 
             </tr>
         `;
