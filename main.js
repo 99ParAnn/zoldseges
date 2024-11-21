@@ -16,20 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
     addToOrder(2, 200)
     addToOrder(4,1)
     displayCatalogue();
+    submitbutton = document.getElementById("submit")
+    if (submit != null) {
 
-    document.getElementById("submit").addEventListener("click",(event) =>
-    {
-        event.preventDefault();
-        console.log("iurrtreth")
-        addToOrder(1, 1)
-    })
+        document.getElementById("submit").addEventListener("click", (event) => {
+            event.preventDefault();
+            console.log("iurrtreth")
+            addToOrder(1, 1)
+        })
+
+    }
 })
 
 function displayCatalogue() {
     const tableBody = document.getElementById('zoldsegek-tablazat');
-    tableBody.innerHTML = '';
-    veggies.forEach((veggie) => {
-        const row = `
+    if (tableBody != null) {
+
+
+        tableBody.innerHTML = '';
+        veggies.forEach((veggie) => {
+            const row = `
             <tr>
                 <td>${veggie.name}</td>
                 <td>${veggie.price} Ft</td>
@@ -37,13 +43,35 @@ function displayCatalogue() {
                 <td> <img src ="${veggie.image}"></td>
             </tr>
         `;
-        tableBody.innerHTML += row;
-    });
+            tableBody.innerHTML += row;
+        });
+
+    }
 }
 
-function displayOrder() { 
+function displayOrder() {
+    const tableBody = document.getElementById('kosar-tablazat');
+    if (tableBody != null) {
 
+
+        tableBody.innerHTML = '';
+        orderedItems.forEach((item) => {
+            let veggie = veggies[item.id]
+            const row = `
+            <tr>
+                <td>${veggie.name}</td>
+                <td>${veggie.price} Ft</td>                
+                <td>${item.amount} kg</td>
+                <td>${veggie.price * item.amount} Ft"></td>
+                
+            </tr>
+        `;
+            tableBody.innerHTML += row;
+        });
+
+    }
 }
+
 
 function addToOrder(whichVeggie, howMuch) {
     foundIt = false;
@@ -56,6 +84,6 @@ function addToOrder(whichVeggie, howMuch) {
     if (!foundIt) {
         orderedItems.push({id: whichVeggie, amount:howMuch})
     }
-    console.log(orderedItems)
+    displayOrder();
 
 }
